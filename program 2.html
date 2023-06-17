@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Number</th>
+      <th>Square</th>
+      <th>Cube</th>
+    </tr>
+    <script>
+      // Function to calculate square and cube
+      function calculate(num) {
+        var square = num * num;
+        var cube = num * num * num;
+        return [square, cube];
+      }
+      
+      // Generate table rows dynamically
+      for (var i = 0; i <= 10; i++) {
+        var result = calculate(i);
+        var square = result[0];
+        var cube = result[1];
+        document.write("<tr>");
+        document.write("<td>" + i + "</td>");
+        document.write("<td>" + square + "</td>");
+        document.write("<td>" + cube + "</td>");
+        document.write("</tr>");
+      }
+    </script>
+  </table>
+</body>
+</html>
