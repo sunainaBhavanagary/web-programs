@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #text {
+      color: red;
+      font-size: 5pt;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="text">TEXT-GROWING</h1>
+
+  <script>
+    var textElement = document.getElementById("text");
+    var fontSize = 5;
+    var growing = true;
+
+    function changeFontSize() {
+      if (growing) {
+        fontSize++;
+        textElement.style.fontSize = fontSize + "pt";
+        textElement.style.color = "red";
+        
+        if (fontSize === 50) {
+          growing = false;
+          textElement.innerHTML = "TEXT-SHRINKING";
+          textElement.style.color = "blue";
+        }
+      } else {
+        fontSize--;
+        textElement.style.fontSize = fontSize + "pt";
+        
+        if (fontSize === 5) {
+          clearInterval(interval);
+        }
+      }
+    }
+
+    var interval = setInterval(changeFontSize, 100);
+  </script>
+</body>
+</html>
