@@ -6,3 +6,5 @@ program 2 output
 program 3 output
 ![image](https://github.com/sunainaBhavanagary/web-programs/assets/136686725/35cfd893-3813-4b0d-bafb-df9f4d6149c9)
 ![image](https://github.com/sunainaBhavanagary/web-programs/assets/136686725/d2834194-efc6-49e3-b919-7f5eba4863d0)
+program 4 output
+![image](https://github.com/sunainaBhavanagary/web-programs/assets/136686725/b1fbeef1-4241-426b-b3b2-5d0728b61eb1)
