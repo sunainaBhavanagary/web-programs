@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    .calculator {
+      display: inline-block;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      background-color: #f5f5f5;
+    }
+    
+    .calculator input[type="number"] {
+      padding: 10px;
+      width: 200px;
+      margin-bottom: 10px;
+    }
+    
+    .calculator button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+    }
+    
+    .calculator button:hover {
+      background-color: #45a049;
+      cursor: pointer;
+    }
+    
+    .result {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="Enter number 1" />
+    <input type="number" id="num2" placeholder="Enter number 2" />
+    <br />
+    <button onclick="calculate('add')">Sum</button>
+    <button onclick="calculate('multiply')">Product</button>
+    <button onclick="calculate('subtract')">Difference</button>
+    <button onclick="calculate('divide')">Quotient</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculate(operation) {
+      var num1 = Number(document.getElementById("num1").value);
+      var num2 = Number(document.getElementById("num2").value);
+      var result = 0;
+      
+      switch(operation) {
+        case "add":
+          result = num1 + num2;
+          break;
+        case "multiply":
+          result = num1 * num2;
+          break;
+        case "subtract":
+          result = num1 - num2;
+          break;
+        case "divide":
+          if (num2 === 0) {
+            result = "Error: Division by zero";
+          } else {
+            result = num1 / num2;
+          }
+          break;
+      }
+      
+      document.getElementById("result").textContent = "Result: " + result;
+    }
+  </script>
+</body>
+</html>
